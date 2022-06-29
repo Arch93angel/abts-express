@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const pathDir = require('path');
+const { response } = require('express');
 const app = express();
 
 app.use(express.static('public'));
@@ -21,6 +22,11 @@ const blog_post = '/blog-post';
 const portfolio_item = '/portfolio-item';
 const portfolio_overview = '/portfolio-overview';
 const coming_soon = '/coming-soon';
+const register = '/register';
+const register_delegate = '/register-delegate';
+const register_exhibitor = '/register-exhibitor';
+const register_workshop = '/register-workshop';
+const register_sponsor = '/register-sponsor';
 
 
 
@@ -54,6 +60,23 @@ app.get(portfolio_overview, (request, response) => {
 app.get(coming_soon, (request, response) => {
     response.render('coming-soon')
 });
+app.get(register, (request, response) => {
+    response.render('register')
+});
+app.get(register_delegate, (request, response) => {
+    response.render('register-delegate')
+});
+app.get(register_exhibitor, (request, response) => {
+    response.render('register-exhibitor')
+});
+app.get(register_workshop, (request, response) => {
+    response.render('register-workshop')
+});
+app.get(register_sponsor, (request, response) => {
+    response.render('register-sponsor')
+});
+
+
 
 
 
