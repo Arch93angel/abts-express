@@ -20,6 +20,7 @@ const blog_home = '/blog-home';
 const blog_post = '/blog-post';
 const portfolio_item = '/portfolio-item';
 const portfolio_overview = '/portfolio-overview';
+const coming_soon = '/coming-soon';
 
 
 
@@ -49,6 +50,9 @@ app.get(portfolio_item, (request, response) => {
 });
 app.get(portfolio_overview, (request, response) => {
     response.render('portfolio-overview')
+});
+app.get(coming_soon, (request, response) => {
+    response.render('coming-soon')
 });
 
 
